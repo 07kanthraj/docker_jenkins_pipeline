@@ -1,19 +1,4 @@
-
-FROM node:14
-
-WORKDIR /app
-
-
-COPY package*.json ./
-
-
-RUN npm install
-
-
-COPY . .
-
-
-EXPOSE 3000
-
-
-CMD ["node", "MyClass.java"]
+FROM openjdk:8
+EXPOSE 8080
+ADD target/docker_jenkins_pipeline.jar docker_jenkins_pipeline.jar 
+ENTRYPOINT [ "java", "-jar","/docker_jenkins_pipeline.jar" ]

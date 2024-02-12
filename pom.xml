@@ -10,7 +10,7 @@
 	</properties>
 	
 	<build>
-		<finalName>my-calculator</finalName>
+		<finalName>docker_jenkins_pipeline</finalName>
 		<plugins>
 			<plugin>
 				<!-- Build an executable JAR test ABC-->
